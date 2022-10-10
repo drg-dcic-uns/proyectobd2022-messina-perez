@@ -46,10 +46,8 @@ public class ModeloImpl implements Modelo {
 	public ResultSet consulta(String sql) 
 	{
 		logger.info("Se intenta realizar la siguiente consulta {}",sql);
-		ResultSet rs= null;		
+		ResultSet rs = null;		
 		java.sql.Statement statementConsulta = null;
-		/* Descomentar y completar el codigo dentro de try{...} para realizar la consulta SQL */
-		
 		try
 		{   
 			statementConsulta = conexion.createStatement();    
@@ -71,17 +69,19 @@ public class ModeloImpl implements Modelo {
 	public void actualizacion (String sql)
 	{
 		logger.info("Se intenta realizar la siguiente actualizacion {}",sql);
-				
-		/* Descomentar y completar codigo dentro de try{...} para realizar la sentencia de actualización SQL 
+		Statement stmt = null;		
+		//Descomentar y completar codigo dentro de try{...} para realizar la sentencia de actualización SQL 
 		try
 		{       
-			...
+			stmt = this.conexion.createStatement();
+			stmt.executeUpdate(sql);
+			stmt.close();
 		}
 		catch (SQLException ex){
 		   logger.error("SQLException: " + ex.getMessage());
 		   logger.error("SQLState: " + ex.getSQLState());
 		   logger.error("VendorError: " + ex.getErrorCode());				   
 		}	
-		*/		
+			
 	}	
 }
