@@ -110,25 +110,33 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 
 	@Override
 	public ArrayList<UbicacionesBean> recuperarUbicaciones() throws Exception {
-		
 		logger.info("recupera las ciudades que tienen aeropuertos.");
-		/** 
-		 * TODO Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
-		 *      Deberia propagar una excepción si hay algún error en la consulta.
-		 *      
-		 *      Reemplazar el siguiente código de prueba por los datos obtenidos desde la BD.
-		 */
-		ArrayList<UbicacionesBean> ubicaciones = new ArrayList<UbicacionesBean>();
-
-		// Datos estáticos de prueba. Quitar y reemplazar por código que recupera las ubicaciones de la B.D. en una lista de UbicacionesBean		 
-		DAOUbicacionesDatosPrueba.poblar();
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("bsas"));
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("chicago"));
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("barcelona"));
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("cordoba"));	
-		// Fin datos estáticos de prueba.
-	
-		return ubicaciones;
+        ArrayList<UbicacionesBean> lista = null;
+        /** 
+         * TODO Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
+         *      Deberia propagar una excepción si hay algún error en la consulta.
+         *
+         *      Reemplazar el siguiente código de prueba por los datos obtenidos desde la BD.
+         */
+        try{
+            lista = new ArrayList<UbicacionesBean>();
+            ResultSet rs= this.consulta("select pais, estado, ciudad, huso from vuelos.ubicaciones");
+            while (rs.next()) {
+                UbicacionesBean ubicacion= new UbicacionesBeanImpl();
+                ubicacion.setCiudad(rs.getString("ciudad"));
+                ubicacion.setEstado(rs.getString("estado"));
+                ubicacion.setHuso(rs.getInt("huso"));
+                ubicacion.setPais(rs.getString("pais"));
+                lista.add(ubicacion);
+            }
+       }
+       catch (SQLException ex) {
+           logger.error("SQLException: " + ex.getMessage());
+           logger.error("SQLState: " + ex.getSQLState());
+           logger.error("VendorError: " + ex.getErrorCode());
+           throw new Exception("Error en la conexión con la BD.");
+       }
+        return lista;
 	}
 
 
