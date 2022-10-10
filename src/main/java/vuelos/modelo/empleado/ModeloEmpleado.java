@@ -65,7 +65,7 @@ public interface ModeloEmpleado extends Modelo {
 	 * 
 	 * @return
 	 */
-	public ArrayList<String> obtenerTiposDocumento();
+	public ArrayList<String> obtenerTiposDocumento() throws Exception;
 
 	/**
 	 * Busca un pasajero en funcion del tipo y nro de documento  

@@ -75,23 +75,22 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	}
 	
 	@Override
-	public ArrayList<String> obtenerTiposDocumento() {
+	public ArrayList<String> obtenerTiposDocumento() throws Exception {
 		logger.info("recupera los tipos de documentos.");
-		/** 
-		 * TODO Debe retornar una lista de strings con los tipos de documentos. 
-		 *      Deberia propagar una excepción si hay algún error en la consulta.
-		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales. 
-		 * 
-		 *  Como no hay una tabla con los tipos de documento, se deberán recuperar todos los tipos validos
-		 *  de la tabla de pasajeros
-		 */
-		ArrayList<String> tipos = new ArrayList<String>();
-		tipos.add("DNI");
-		tipos.add("Pasaporte");
-		// Fin datos estáticos de prueba.
+        ArrayList<String> tipos = new ArrayList<String>() ;
+
+        try{
+            ResultSet rs= this.consulta("SELECT doc_tipo from Empleados");
+            while (rs.next()) {
+                tipos.add(rs.getString("doc_tipo"));
+            }
+       }
+       catch (SQLException ex) {
+           logger.error("SQLException: " + ex.getMessage());
+           logger.error("SQLState: " + ex.getSQLState());
+           logger.error("VendorError: " + ex.getErrorCode());
+           throw new Exception("Error en la conexión con la BD.");
+       }
 		
 		return tipos;
 	}		

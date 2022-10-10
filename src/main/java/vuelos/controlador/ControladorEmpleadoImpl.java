@@ -323,12 +323,19 @@ public class ControladorEmpleadoImpl implements ControladorEmpleado {
 				this.ventana.informar("Debe seleccionar una clase del vuelo de VUELTA para realizar una reserva.");
 				return;
 			}
+
+			try {
+
 			this.ventana.mostrarSolicitudReservaIdaVuelta(	this.modelo.obtenerTiposDocumento(), 
 															getVueloIdaSeleccionado(), 
 															getDetalleVueloIdaSeleccionado(), 
 															getVueloVueltaSeleccionado(), 
 															getDetalleVueloVueltaSeleccionado()
-														);			
+														);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
 		} else {  // vuelo solo de ida
 			if (getVueloIdaSeleccionado() == null) {
 				this.ventana.informar("Debe seleccionar un vuelo para realizar una reserva.");
@@ -338,10 +345,14 @@ public class ControladorEmpleadoImpl implements ControladorEmpleado {
 				this.ventana.informar("Debe seleccionar una clase para realizar una reserva.");
 				return;
 			}
-			this.ventana.mostrarSolicitudReservaSoloIda(this.modelo.obtenerTiposDocumento(), 
-														getVueloIdaSeleccionado(), 
-														getDetalleVueloIdaSeleccionado()
-														);			
+			try {
+				this.ventana.mostrarSolicitudReservaSoloIda(this.modelo.obtenerTiposDocumento(), 
+															getVueloIdaSeleccionado(), 
+															getDetalleVueloIdaSeleccionado()
+															);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}			
 		}
 	}	
 	
