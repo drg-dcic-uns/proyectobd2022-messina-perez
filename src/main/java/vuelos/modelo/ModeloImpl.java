@@ -25,10 +25,9 @@ public class ModeloImpl implements Modelo {
 	@Override
 	public boolean conectar(String username, String password) {
 		logger.info("Se establece la conexión a la BD.");
-		
-		// Código de prueba. Quitar y reemplazar por código que establece y retorna la conexión.             
-    	   return true;
-    	// fin código de prueba   
+		this.conexion = Conexion.getConnection(username, password);
+    	   
+		return (this.conexion != null); 
 	}
 
 	@Override
@@ -48,17 +47,19 @@ public class ModeloImpl implements Modelo {
 	{
 		logger.info("Se intenta realizar la siguiente consulta {}",sql);
 		ResultSet rs= null;		
-		/* Descomentar y completar el codigo dentro de try{...} para realizar la consulta SQL 
+		java.sql.Statement statementConsulta = null;
+		/* Descomentar y completar el codigo dentro de try{...} para realizar la consulta SQL */
+		
 		try
-		{       
-			...
+		{   
+			statementConsulta = conexion.createStatement();    
+			rs = statementConsulta.executeQuery(sql);
 		}
 		catch (SQLException ex){
 		   logger.error("SQLException: " + ex.getMessage());
 		   logger.error("SQLState: " + ex.getSQLState());
 		   logger.error("VendorError: " + ex.getErrorCode());				   
 		}	
-		*/
 		return rs;
 	}	
 	

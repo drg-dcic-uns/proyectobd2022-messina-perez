@@ -6,10 +6,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
+import java.io.FileInputStream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import vuelos.modelo.ModeloImpl;
 import vuelos.modelo.empleado.beans.DetalleVueloBean;
 import vuelos.modelo.empleado.beans.EmpleadoBean;
@@ -27,6 +28,7 @@ import vuelos.modelo.empleado.dao.DAOReservaImpl;
 import vuelos.modelo.empleado.dao.DAOVuelos;
 import vuelos.modelo.empleado.dao.DAOVuelosImpl;
 import vuelos.modelo.empleado.dao.datosprueba.DAOUbicacionesDatosPrueba;
+import vuelos.utils.Conexion;
 
 public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 
@@ -35,26 +37,41 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	
 	private Integer legajo = null;
 	
-	public ModeloEmpleadoImpl() {
-		logger.debug("Se crea el modelo Empleado.");
+	public ModeloEmpleadoImpl() throws Exception {
+		// inicializa la conexión con el servidor utilizando el método estático de la clase Conexion
+		// que setea el driver (jdbc), la ubicación del servidor y puerto (url) y la bases de datos, 
+		// recuperando estos datos de un archivo de propiedades  
+		try
+		{
+			Conexion.inicializar("cfg/conexionBD.properties");
+		}
+		catch  (Exception ex) {
+			logger.error("Error al recuperar el archivo de propiedades de la BD y no se pudo establecer la conexion");
+			throw new Exception("No se pudo conectar al servidor. Error al recuperar el archivo de configuración de la B.D.");
+		}
 	}
 	
 
 	@Override
 	public boolean autenticarUsuarioAplicacion(String legajo, String password) throws Exception {
+		boolean resultado = false;
 		logger.info("Se intenta autenticar el legajo {} con password {}", legajo, password);
-		/** 
-		 * TODO Código que autentica que exista un legajo de empleado y que el password corresponda a ese legajo
-		 *      (recuerde que el password guardado en la BD está encriptado con MD5) 
-		 *      En caso exitoso deberá registrar el legajo en la propiedad legajo y retornar true.
-		 *      Si la autenticación no es exitosa porque el legajo no es válido o el password es incorrecto
-		 *      deberá retornar falso y si hubo algún otro error deberá producir y propagar una excepción.
-		 */
+
+		String query = "SELECT * FROM empleados WHERE legajo = '"+ legajo +"' and password = md5('" + password +"')";
+		ResultSet rs = this.consulta(query);
+
+		if (rs.next()) {
+			resultado = true;
+			this.legajo = Integer.parseInt(legajo);
+		} else {
+			resultado = false;
+		}
+
+		java.sql.Statement temp = rs.getStatement();
+		rs.close();
+		temp.close();
 		
-		// Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  		
-		this.legajo = 1;
-		return true;
-		// Fin datos estáticos de prueba.
+		return resultado;
 	}
 	
 	@Override
