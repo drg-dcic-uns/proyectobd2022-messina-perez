@@ -129,6 +129,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
                 lista.add(ubicacion);
             }
        }
+	   
        catch (SQLException ex) {
            logger.error("SQLException: " + ex.getMessage());
            logger.error("SQLState: " + ex.getSQLState());

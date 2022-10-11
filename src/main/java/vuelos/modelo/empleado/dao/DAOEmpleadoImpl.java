@@ -4,9 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.mysql.cj.protocol.Resultset;
 
 import vuelos.modelo.empleado.beans.EmpleadoBean;
 import vuelos.modelo.empleado.beans.EmpleadoBeanImpl;
@@ -25,8 +28,6 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 
 	@Override
 	public EmpleadoBean recuperarEmpleado(int legajo) throws Exception {
-		logger.info("recupera el empleado que corresponde al legajo {}.", legajo);
-		
 		/**
 		 * TODO Debe recuperar de la B.D. los datos del empleado que corresponda al legajo pasado 
 		 *      como parámetro y devolver los datos en un objeto EmpleadoBean. Si no existe el legajo 
@@ -41,6 +42,31 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 		 */		
 		EmpleadoBean empleado = null;
 		
+		String sql = "SELECT * FROM empleados WHERE legajo = " + legajo ;
+		
+		Statement select = conexion.createStatement();
+		ResultSet rs = select.executeQuery(sql);
+			
+		if (rs.next()) {
+			logger.info("Se recupero el empleado que corresponde al legajo {}.", legajo);
+			empleado = new EmpleadoBeanImpl();
+			empleado.setLegajo(rs.getInt("legajo"));
+			empleado.setApellido(rs.getString("apellido"));
+			empleado.setNombre(rs.getString("nombre"));
+			empleado.setTipoDocumento(rs.getString("doc_tipo"));
+			empleado.setNroDocumento(rs.getInt("doc_nro"));
+			empleado.setDireccion(rs.getString("direccion"));
+			empleado.setTelefono(rs.getString("telefono"));
+			//empleado.setCargo(rs.getString("cargo"));
+			empleado.setCargo("Empleado de Prestamos");
+			empleado.setPassword(rs.getString("password"));
+			empleado.setNroSucursal((int) Math.random());
+		} 
+
+		rs.close();
+		select.close();
+
+		/*
 		empleado = new EmpleadoBeanImpl();
 		empleado.setLegajo(9);
 		empleado.setApellido("ApEmp9");
@@ -52,7 +78,8 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 		empleado.setCargo("Empleado de Prestamos");
 		empleado.setPassword("45c48cce2e2d7fbdea1afc51c7c6ad26"); // md5(9);
 		empleado.setNroSucursal(7);
-		
+		*/
+
 		return empleado;
 		// Fin datos estáticos de prueba.
 	}
