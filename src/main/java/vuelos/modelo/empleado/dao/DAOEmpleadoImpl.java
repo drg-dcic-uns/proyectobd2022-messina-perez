@@ -57,8 +57,7 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 			empleado.setNroDocumento(rs.getInt("doc_nro"));
 			empleado.setDireccion(rs.getString("direccion"));
 			empleado.setTelefono(rs.getString("telefono"));
-			//empleado.setCargo(rs.getString("cargo"));
-			empleado.setCargo("Empleado de Prestamos");
+			empleado.setCargo("Empleado");
 			empleado.setPassword(rs.getString("password"));
 			empleado.setNroSucursal((int) Math.random());
 		} 

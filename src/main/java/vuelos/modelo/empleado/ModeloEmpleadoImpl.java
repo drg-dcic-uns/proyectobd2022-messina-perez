@@ -54,11 +54,17 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 
 	@Override
 	public boolean autenticarUsuarioAplicacion(String legajo, String password) throws Exception {
-		boolean resultado = false;
 		logger.info("Se intenta autenticar el legajo {} con password {}", legajo, password);
 
-		String query = "SELECT * FROM empleados WHERE legajo = '"+ legajo +"' and password = md5('" + password +"')";
-		ResultSet rs = this.consulta(query);
+		String sql = "SELECT * FROM empleados WHERE legajo = ? and password = md5(?)";
+		ResultSet rs;
+		boolean resultado = false;
+
+		
+		java.sql.PreparedStatement statement = conexion.prepareStatement(sql);
+		statement.setString(1, legajo);
+		statement.setString(2, password);
+		rs = statement.executeQuery();
 
 		if (rs.next()) {
 			resultado = true;

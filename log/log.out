@@ -2631,3 +2631,1104 @@ Saliendo de la aplicaci�n.
 Se cierra la conexi�n a la BD.
 Se intenta cerrar la conexi�n activa
 Eliminaci�n de la ventana.
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Se intenta realizar la siguiente consulta SELECT * FROM empleados WHERE legajo = '101' and password = md5('emp101')
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminaci�n de la ventana de login.
+Saliendo de la aplicaci�n.
+Se cierra la conexi�n a la BD.
+Se intenta cerrar la conexi�n activa
+Eliminaci�n de la ventana.
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Se intenta realizar la siguiente consulta SELECT * FROM empleados WHERE legajo = '101' and password = md5('emp101')
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminaci�n de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita informaci�n de vuelos disponibles: esIdaVuelta:false fechaDesde:6 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita informaci�n de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Fri Jan 06 10:37:18 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT vuelos_disponibles.*, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-06'
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la informaci�n de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita informaci�n de vuelos disponibles: esIdaVuelta:false fechaDesde:6 fechaHasta:null Origen:Argentina - Buenos Aires - Mar del Plata Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita informaci�n de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Fri Jan 06 10:37:18 ART 2023 desde Argentina - Buenos Aires - Mar del Plata a Argentina - Buenos Aires - Buenos Aires.
+SQL: SELECT vuelos_disponibles.*, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Mar del Plata' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Buenos Aires' and vl.pais = 'Argentina' and vl.estado = 'Buenos Aires' and fecha= '2023-01-06'
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la informaci�n de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo MB con fecha 2023-01-06 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo MB .
+Se recuperaron 3 clases para el vuelo MB
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccion� el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita informaci�n de vuelos disponibles: esIdaVuelta:false fechaDesde:6 fechaHasta:null Origen:Argentina - Buenos Aires - Mar del Plata Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita informaci�n de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Fri Jan 06 10:37:18 ART 2023 desde Argentina - Buenos Aires - Mar del Plata a Argentina - Buenos Aires - Buenos Aires.
+SQL: SELECT vuelos_disponibles.*, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Mar del Plata' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Buenos Aires' and vl.pais = 'Argentina' and vl.estado = 'Buenos Aires' and fecha= '2023-01-06'
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la informaci�n de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo MB con fecha 2023-01-06 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo MB .
+Se recuperaron 3 clases para el vuelo MB
+Carga el detalle tabla de detalle de solo IDA.
+Saliendo de la aplicaci�n.
+Se cierra la conexi�n a la BD.
+Se intenta cerrar la conexi�n activa
+Eliminaci�n de la ventana.
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Hubo un error en la autenticaci�n.
+Crea una ventana modal informando: Parameter index out of range (2 > number of parameters, which is 1)..
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Hubo un error en la autenticaci�n.
+Crea una ventana modal informando: Parameter index out of range (0 < 1 )..
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Hubo un error en la autenticaci�n.
+Crea una ventana modal informando: Parameter index out of range (2 > number of parameters, which is 1)..
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminaci�n de la ventana de login.
+Saliendo de la aplicaci�n.
+Se cierra la conexi�n a la BD.
+Se intenta cerrar la conexi�n activa
+Eliminaci�n de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:6 fechaHasta:null Origen:Argentina - Buenos Aires - Mar del Plata Destino:Argentina - Mendoza - Mendoza.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Thu Jan 06 10:56:47 ART 2022 desde Argentina - Buenos Aires - Mar del Plata a Argentina - Mendoza - Mendoza.
+SQL: SELECT vuelos_disponibles.*, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Mar del Plata' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Mendoza' and vl.pais = 'Argentina' and vl.estado = 'Mendoza' and fecha= '2022-01-06'
+SQLException: Table 'vuelos.vuelos_disponibles' doesn't exist
+SQLState: 42S02
+VendorError: 1146
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 11:27:53 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT vuelos_disponibles.*, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 2 
+Se solicita a la ventana mostrar la información de 2 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTICT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+SQLException: Unknown column 'DISTICT' in 'field list'
+SQLState: 42S22
+VendorError: 1054
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password EMP101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password EMP101
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Intenta ingresar como Empleado con legajo 101, password EMP101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password EMP101
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+SQLException: Column 'nombre_aero_sale' not found.
+SQLState: S0022
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se produjo una excepción You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''BC1' at line 1
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:6 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Fri Jan 06 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-06'
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 5 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 0 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 2 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 2 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:2 fechaHasta:4 Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Mon Jan 02 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-02'
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 00:00:00 ART 2023 desde Argentina - Cordoba - Cordoba a Argentina - Buenos Aires - Buenos Aires.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Cordoba' and vs.pais = 'Argentina' and vs.estado = 'Cordoba' and vl.ciudad = 'Buenos Aires' and vl.pais = 'Argentina' and vl.estado = 'Buenos Aires' and fecha= '2023-01-04'
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 0
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-02 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 3 clases para el vuelo BC1
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:2 fechaHasta:5 Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Mon Jan 02 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-02'
+Recupera la lista de vuelos disponibles para la fecha Thu Jan 05 00:00:00 ART 2023 desde Argentina - Cordoba - Cordoba a Argentina - Buenos Aires - Buenos Aires.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Cordoba' and vs.pais = 'Argentina' and vs.estado = 'Cordoba' and vl.ciudad = 'Buenos Aires' and vl.pais = 'Argentina' and vl.estado = 'Buenos Aires' and fecha= '2023-01-05'
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-02 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 3 clases para el vuelo BC1
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo CB2 con fecha 2023-01-05 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo CB2 .
+Se recuperaron 2 clases para el vuelo CB2
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:2 fechaHasta:5 Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Mon Jan 02 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-02'
+Recupera la lista de vuelos disponibles para la fecha Thu Jan 05 00:00:00 ART 2023 desde Argentina - Cordoba - Cordoba a Argentina - Buenos Aires - Buenos Aires.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Cordoba' and vs.pais = 'Argentina' and vs.estado = 'Cordoba' and vl.ciudad = 'Buenos Aires' and vl.pais = 'Argentina' and vl.estado = 'Buenos Aires' and fecha= '2023-01-05'
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:2 fechaHasta:5 Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Mon Jan 02 00:00:00 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-02'
+Recupera la lista de vuelos disponibles para la fecha Thu Jan 05 00:00:00 ART 2023 desde Argentina - Cordoba - Cordoba a Argentina - Buenos Aires - Buenos Aires.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Cordoba' and vs.pais = 'Argentina' and vs.estado = 'Cordoba' and vl.ciudad = 'Buenos Aires' and vl.pais = 'Argentina' and vl.estado = 'Buenos Aires' and fecha= '2023-01-05'
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-02 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 3 clases para el vuelo BC1
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo CB2 con fecha 2023-01-05 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo CB2 .
+Se recuperaron 2 clases para el vuelo CB2
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
