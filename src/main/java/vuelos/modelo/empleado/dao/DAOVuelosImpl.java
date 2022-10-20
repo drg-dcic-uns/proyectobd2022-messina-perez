@@ -63,7 +63,6 @@ public class DAOVuelosImpl implements DAOVuelos {
 			 ResultSet rs = select.executeQuery(sql);
 			
 			 while (rs.next()) {
-				//logger.debug("Se recuperÃ³ el item con nombre {} y fecha {}", rs.getString("nombre_batalla"), rs.getDate("fecha"));
 				InstanciaVueloBean instancia = new InstanciaVueloBeanImpl(); 	
 				instancia.setNroVuelo(rs.getString("nro_vuelo"));
 				instancia.setModelo(rs.getString("modelo"));	
@@ -109,33 +108,31 @@ public class DAOVuelosImpl implements DAOVuelos {
 
 	@Override
 	public ArrayList<DetalleVueloBean> recuperarDetalleVuelo(InstanciaVueloBean vuelo) throws Exception {
-		/** 
-		 * TODO Debe retornar una lista de clases, precios y asientos disponibles de dicho vuelo.		   
-		 *      Debe propagar una excepción si hay algún error en la consulta.    
-		 *      
-		 *      Nota: para acceder a la B.D. utilice la propiedad "conexion" que ya tiene una conexión
-		 *      establecida con el servidor de B.D. (inicializada en el constructor DAOVuelosImpl(...)).
-		 */
-		//Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.
 		ArrayList<DetalleVueloBean> resultado = new ArrayList<DetalleVueloBean>();
-		
 		String sql = "SELECT clase, precio, asientos_disponibles FROM vuelos_disponibles WHERE nro_vuelo = '" + vuelo.getNroVuelo() + "' and fecha = '" + Fechas.convertirDateAStringDB(vuelo.getFechaVuelo()) + "'";
-		Statement select = conexion.createStatement();
-		ResultSet rs = select.executeQuery(sql);
+		try{
+		    Statement select = conexion.createStatement();
+	        ResultSet rs = select.executeQuery(sql);
 
-		while(rs.next()) {
-			DetalleVueloBean dv = new DetalleVueloBeanImpl();
+	        while(rs.next()) {
+	            DetalleVueloBean dv = new DetalleVueloBeanImpl();
+	            dv.setVuelo(vuelo);
+	            dv.setClase(rs.getString("clase"));
+	            dv.setPrecio((float) Parsing.parseMonto(rs.getString("precio")));
+	            dv.setAsientosDisponibles(rs.getInt("asientos_disponibles"));
+	            resultado.add(dv);
+	        }
 
-			dv.setVuelo(vuelo);
-			dv.setClase(rs.getString("clase"));
-			dv.setPrecio((float) Parsing.parseMonto(rs.getString("precio")));
-			dv.setAsientosDisponibles(rs.getInt("asientos_disponibles"));
+	        rs.close();
+	        select.close();
 
-			resultado.add(dv);
-		}
-
-		rs.close();
-		select.close();
+        }
+        catch (SQLException ex) {
+            logger.error("SQLException: " + ex.getMessage());
+            logger.error("SQLState: " + ex.getSQLState());
+            logger.error("VendorError: " + ex.getErrorCode());
+            throw new Exception("Error en la conexión con la BD.");
+        }
 
 		return resultado; 
 	}

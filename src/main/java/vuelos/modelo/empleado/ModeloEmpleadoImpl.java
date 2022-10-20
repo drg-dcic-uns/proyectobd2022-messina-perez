@@ -60,22 +60,29 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		ResultSet rs;
 		boolean resultado = false;
 
-		
-		java.sql.PreparedStatement statement = conexion.prepareStatement(sql);
-		statement.setString(1, legajo);
-		statement.setString(2, password);
-		rs = statement.executeQuery();
+		try{
+		    java.sql.PreparedStatement statement = conexion.prepareStatement(sql);
+	        statement.setString(1, legajo);
+	        statement.setString(2, password);
+	        rs = statement.executeQuery();
 
-		if (rs.next()) {
-			resultado = true;
-			this.legajo = Integer.parseInt(legajo);
-		} else {
-			resultado = false;
+	        if (rs.next()) {
+	            resultado = true;
+	            this.legajo = Integer.parseInt(legajo);
+	        } else {
+	            resultado = false;
+	        }
+
+	        java.sql.Statement temp = rs.getStatement();
+	        rs.close();
+	        temp.close();
+	    }
+		catch (SQLException ex) {
+		    logger.error("SQLException: " + ex.getMessage());
+		    logger.error("SQLState: " + ex.getSQLState());
+		    logger.error("VendorError: " + ex.getErrorCode());
+		    throw new Exception("Error en la conexión con la BD.");
 		}
-
-		java.sql.Statement temp = rs.getStatement();
-		rs.close();
-		temp.close();
 		
 		return resultado;
 	}
@@ -85,11 +92,11 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		logger.info("recupera los tipos de documentos.");
         ArrayList<String> tipos = new ArrayList<String>() ;
 
-        try{
-            ResultSet rs= this.consulta("SELECT doc_tipo from Empleados");
-            while (rs.next()) {
-                tipos.add(rs.getString("doc_tipo"));
-            }
+       try{
+           ResultSet rs= this.consulta("SELECT doc_tipo from Empleados");
+           while (rs.next()) {
+               tipos.add(rs.getString("doc_tipo"));
+           }
        }
        catch (SQLException ex) {
            logger.error("SQLException: " + ex.getMessage());
@@ -117,12 +124,6 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	public ArrayList<UbicacionesBean> recuperarUbicaciones() throws Exception {
 		logger.info("recupera las ciudades que tienen aeropuertos.");
         ArrayList<UbicacionesBean> lista = null;
-        /** 
-         * TODO Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
-         *      Deberia propagar una excepción si hay algún error en la consulta.
-         *
-         *      Reemplazar el siguiente código de prueba por los datos obtenidos desde la BD.
-         */
         try{
             lista = new ArrayList<UbicacionesBean>();
             ResultSet rs= this.consulta("select pais, estado, ciudad, huso from vuelos.ubicaciones");
@@ -135,14 +136,13 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
                 lista.add(ubicacion);
             }
        }
-	   
        catch (SQLException ex) {
            logger.error("SQLException: " + ex.getMessage());
            logger.error("SQLState: " + ex.getSQLState());
            logger.error("VendorError: " + ex.getErrorCode());
            throw new Exception("Error en la conexión con la BD.");
        }
-        return lista;
+       return lista;
 	}
 
 
