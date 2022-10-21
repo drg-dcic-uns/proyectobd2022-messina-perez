@@ -83,7 +83,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
         ArrayList<String> tipos = new ArrayList<String>() ;
 
        try{
-           ResultSet rs= this.consulta("SELECT DISTINCT doc_tipo from Empleados");
+           ResultSet rs= this.consulta("SELECT DISTINCT doc_tipo from pasajeros");
            while (rs.next()) {
                tipos.add(rs.getString("doc_tipo"));
            }
