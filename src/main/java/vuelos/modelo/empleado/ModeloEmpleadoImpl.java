@@ -37,18 +37,8 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	
 	private Integer legajo = null;
 	
-	public ModeloEmpleadoImpl() throws Exception {
-		// inicializa la conexión con el servidor utilizando el método estático de la clase Conexion
-		// que setea el driver (jdbc), la ubicación del servidor y puerto (url) y la bases de datos, 
-		// recuperando estos datos de un archivo de propiedades  
-		try
-		{
-			Conexion.inicializar("cfg/conexionBD.properties");
-		}
-		catch  (Exception ex) {
-			logger.error("Error al recuperar el archivo de propiedades de la BD y no se pudo establecer la conexion");
-			throw new Exception("No se pudo conectar al servidor. Error al recuperar el archivo de configuración de la B.D.");
-		}
+	public ModeloEmpleadoImpl() {
+	    logger.debug("Se crea el modelo Empleado.");
 	}
 	
 
@@ -88,12 +78,12 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	}
 	
 	@Override
-	public ArrayList<String> obtenerTiposDocumento() throws Exception {
+	public ArrayList<String> obtenerTiposDocumento() {
 		logger.info("recupera los tipos de documentos.");
         ArrayList<String> tipos = new ArrayList<String>() ;
 
        try{
-           ResultSet rs= this.consulta("SELECT doc_tipo from Empleados");
+           ResultSet rs= this.consulta("SELECT DISTINCT doc_tipo from Empleados");
            while (rs.next()) {
                tipos.add(rs.getString("doc_tipo"));
            }
@@ -102,7 +92,6 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
            logger.error("SQLException: " + ex.getMessage());
            logger.error("SQLState: " + ex.getSQLState());
            logger.error("VendorError: " + ex.getErrorCode());
-           throw new Exception("Error en la conexión con la BD.");
        }
 		
 		return tipos;

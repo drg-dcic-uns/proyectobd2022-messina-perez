@@ -52,12 +52,7 @@ public class ControladorLoginImpl implements ControladorLogin {
 			
 			logger.debug("usuario {}, password {}",usuario.getUsername(), usuario.getPassword());
 			ModeloEmpleado modeloEmpleado = null;
-			try {
-				modeloEmpleado = new ModeloEmpleadoImpl();
-			} catch(Exception e) {
-				System.out.println(e.getMessage());
-			}
-
+			modeloEmpleado = new ModeloEmpleadoImpl();
 			if (modeloEmpleado.conectar(usuario.getUsername(), usuario.getPassword())) {
 			
 				try {
