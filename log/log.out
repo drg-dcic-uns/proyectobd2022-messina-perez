@@ -4817,3 +4817,163 @@ Solicita recuperar informaciÃ³n de la reserva con codigo 101
 Se recuperÃ³ la reserva: 101, Reserva confirmada
 RealizÃ³ la reserva y solicita que la ventana muestre la info
 Se solicita mostrar la reserva cuyo estado es Reserva confirmada
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 101, password emp101
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 101 con password emp101
+Empleado 101 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Se registra al empleado Apellido_Emp101, Nombre_Emp101 con legajo 101
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta select pais, estado, ciudad, huso from vuelos.ubicaciones
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 5 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:4 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Cordoba - Cordoba.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Jan 04 01:23:08 ART 2023 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Cordoba - Cordoba.
+SQL: SELECT DISTINCT nro_vuelo, modelo, fecha, dia_sale, hora_sale, hora_llega, tiempo_estimado, codigo_aero_sale, codigo_aero_llega, nombre_aero_sale, nombre_aero_llega, vs.direccion as 'dir_sale', vs.telefono as 'tel_sale', vl.direccion as 'dir_llega', vl.telefono as 'tel_llega' FROM vuelos_disponibles join aeropuertos as vs on codigo_aero_sale = vs.codigo join aeropuertos as vl on codigo_aero_llega = vl.codigo WHERE vs.ciudad = 'Buenos Aires' and vs.pais = 'Argentina' and vs.estado = 'Buenos Aires' and vl.ciudad = 'Cordoba' and vl.pais = 'Argentina' and vl.estado = 'Cordoba' and fecha= '2023-01-04'
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo BC1 con fecha 2023-01-04 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo BC1 .
+Se recuperaron 2 clases para el vuelo BC1
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+Valida que haya seleccionado todo e informa a la ventana que muestre la pantalla de reserva.
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT DISTINCT doc_tipo from pasajeros
+El controlador solicitó que se muestre la pantalla para realizar una reserva.
+Carga el combo con los 1 tipos de documento recuperados
+Busca al pasajero DNI 1
+Solicita al DAO un pasajero con tipo DNI y nro 1
+El DAO retorna al pasajero Apellido 1 Nombre 1
+La ventana muestra al pasajero.
+Se muestra al pasajero en el panel de solo ida
+Se solicita comenzar el proceso de reserva.
+Se solicita al modelo realizar una reserva solo ida
+Solicita al DAO un empleado con legajo 101
+Se recupero el empleado que corresponde al legajo 101.
+Realiza la reserva de solo ida con pasajero 1
+se actualiza la reserva con una reserva de solo ida
+Reserva: 101, Reserva confirmada
+Solicita recuperar información de la reserva con codigo 101
+Se recuperó la reserva: 101, Reserva confirmada
+Realizó la reserva y solicita que la ventana muestre la info
+Se solicita mostrar la reserva cuyo estado es Reserva confirmada
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
