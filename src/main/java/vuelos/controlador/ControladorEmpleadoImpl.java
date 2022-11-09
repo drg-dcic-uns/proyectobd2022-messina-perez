@@ -397,8 +397,12 @@ public class ControladorEmpleadoImpl implements ControladorEmpleado {
 				logger.info("Realizó la reserva y solicita que la ventana muestre la info");
 				this.ventana.mostrarResultadoReservaIdaVuelta(reserva);
 			} catch (Exception e) {
+				Writer buffer = new StringWriter();
+				PrintWriter pw = new PrintWriter(buffer);
+				e.printStackTrace(pw);
 				logger.error("Hubo un error al realizar la reserva de ida y vuelta: {}", e.getMessage());
-				this.ventana.informar("No se pudo realizar la reserva de ida y vuelta.");
+				//this.ventana.informar("No se pudo realizar la reserva de ida y vuelta.");
+				this.ventana.informar(e.getLocalizedMessage());
 			}
 		} else {
 			try {
@@ -408,13 +412,10 @@ public class ControladorEmpleadoImpl implements ControladorEmpleado {
 				logger.info("Realizó la reserva y solicita que la ventana muestre la info");
 				this.ventana.mostrarResultadoReservaSoloIda(reserva);				 
 			} catch (Exception e) {
-				// Ejemplo de como mostrar el stackTrace en el logger
 				Writer buffer = new StringWriter();
 				PrintWriter pw = new PrintWriter(buffer);
 				e.printStackTrace(pw);
-				
 				logger.error("Hubo un error al realizar la reserva de solo ida: {}", buffer.toString());
-				
 				this.ventana.informar(e.getLocalizedMessage());
 			}
 		}

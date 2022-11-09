@@ -292,7 +292,7 @@ CREATE USER 'cliente' IDENTIFIED BY 'cliente';
 GRANT SELECT ON vuelos.vuelos_disponibles TO 'cliente';
 
 DELIMITER !
-CREATE PROCEDURE reservarSoloIda(IN legajo_empleado INT, IN doc_tipo_pasajero VARCHAR(45), IN doc_nro_pasajero INT, IN nro_vuelo_ida VARCHAR(10), IN fecha_vuelo_ida DATE, IN clase_vuelo_ida VARCHAR(20), OUT resultado VARCHAR(100))
+CREATE PROCEDURE reservarSoloIda(IN legajo_empleado INT, IN doc_tipo_pasajero VARCHAR(45), IN doc_nro_pasajero INT, IN nro_vuelo_ida VARCHAR(10), IN fecha_vuelo_ida DATE, IN clase_vuelo_ida VARCHAR(20), OUT resultado VARCHAR(100), OUT id_reserva INT)
     BEGIN
         DECLARE cant_asientos_reservados_ida INT;
         DECLARE cant_asientos_disponibles_ida INT;
@@ -301,10 +301,13 @@ CREATE PROCEDURE reservarSoloIda(IN legajo_empleado INT, IN doc_tipo_pasajero VA
         BEGIN # Si se produce una SQLEXCEPTION, se retrocede la transacción con ROLLBACK.
 			GET DIAGNOSTICS CONDITION 1 @sqlstate = RETURNED_SQLSTATE, @errno = MYSQL_ERRNO, @text = MESSAGE_TEXT;
             SET resultado = 'Reserva IDA no exitosa: SQLEXCEPTION | Transaccion abortada.';
+            SET id_reserva = -1;
             SELECT CONCAT(@sqlstate, ' | ', @errno, ' | ', @text) AS 'Error';
             ROLLBACK;
         END;
         START TRANSACTION;
+            SET id_reserva = -1;
+
             IF EXISTS (SELECT * FROM empleados e WHERE e.legajo = legajo_empleado) AND
                 EXISTS (SELECT * FROM pasajeros p WHERE p.doc_tipo = doc_tipo_pasajero AND p.doc_nro = doc_nro_pasajero) AND
                 EXISTS (SELECT * FROM vuelos_disponibles vIDA WHERE vIDA.nro_vuelo = nro_vuelo_ida AND vIDA.fecha = fecha_vuelo_ida AND vIDA.clase = clase_vuelo_ida) THEN
@@ -328,6 +331,7 @@ CREATE PROCEDURE reservarSoloIda(IN legajo_empleado INT, IN doc_tipo_pasajero VA
                     UPDATE asientos_reservados SET cantidad = cantidad + 1 WHERE vuelo = nro_vuelo_ida AND fecha = fecha_vuelo_ida AND clase = clase_vuelo_ida;
                     
                     SET resultado = 'Reserva IDA exitosa.';
+                    SET id_reserva = LAST_INSERT_ID();
                 ELSE
                     SET resultado = 'Reserva IDA no exitosa: No hay lugares disponibles.';
                 END IF;
@@ -339,7 +343,7 @@ CREATE PROCEDURE reservarSoloIda(IN legajo_empleado INT, IN doc_tipo_pasajero VA
 DELIMITER ;
 
 DELIMITER !
-CREATE PROCEDURE reservarIdaVuelta(IN legajo_empleado INT, IN doc_tipo_pasajero VARCHAR(45), IN doc_nro_pasajero INT, IN nro_vuelo_ida VARCHAR(10), IN fecha_vuelo_ida DATE, IN clase_vuelo_ida VARCHAR(20), IN nro_vuelo_vuelta VARCHAR(10), IN fecha_vuelo_vuelta DATE, IN clase_vuelo_vuelta VARCHAR(20), OUT resultado VARCHAR(100))
+CREATE PROCEDURE reservarIdaVuelta(IN legajo_empleado INT, IN doc_tipo_pasajero VARCHAR(45), IN doc_nro_pasajero INT, IN nro_vuelo_ida VARCHAR(10), IN fecha_vuelo_ida DATE, IN clase_vuelo_ida VARCHAR(20), IN nro_vuelo_vuelta VARCHAR(10), IN fecha_vuelo_vuelta DATE, IN clase_vuelo_vuelta VARCHAR(20), OUT resultado VARCHAR(100), OUT id_reserva INT)
     BEGIN
         DECLARE cant_asientos_reservados_ida INT;
         DECLARE cant_asientos_disponibles_ida INT;
@@ -351,10 +355,13 @@ CREATE PROCEDURE reservarIdaVuelta(IN legajo_empleado INT, IN doc_tipo_pasajero 
         BEGIN # Si se produce una SQLEXCEPTION, se retrocede la transacción con ROLLBACK.
 			GET DIAGNOSTICS CONDITION 1 @sqlstate = RETURNED_SQLSTATE, @errno = MYSQL_ERRNO, @text = MESSAGE_TEXT;
             SET resultado = 'Reserva IDA-VUELTA no exitosa: SQLEXCEPTION | Transaccion abortada.';
+            SET id_reserva = -1;
             SELECT CONCAT(@sqlstate, ' | ', @errno, ' | ', @text) AS 'Error';
             ROLLBACK;
         END;
         START TRANSACTION;
+            SET id_reserva = -1;
+            
             IF EXISTS (SELECT * FROM empleados e WHERE e.legajo = legajo_empleado) AND
                 EXISTS (SELECT * FROM pasajeros p WHERE p.doc_tipo = doc_tipo_pasajero AND p.doc_nro = doc_nro_pasajero) AND
                 EXISTS (SELECT * FROM vuelos_disponibles vIDA WHERE vIDA.fecha = fecha_vuelo_ida AND vIDA.nro_vuelo = nro_vuelo_ida AND vIDA.clase = clase_vuelo_ida) AND
@@ -391,6 +398,7 @@ CREATE PROCEDURE reservarIdaVuelta(IN legajo_empleado INT, IN doc_tipo_pasajero 
                     UPDATE asientos_reservados SET cantidad = cantidad + 1 WHERE vuelo = nro_vuelo_vuelta AND fecha = fecha_vuelo_vuelta AND clase = clase_vuelo_vuelta;
 
                     SET resultado = 'Reserva IDA-VUELTA exitosa.';
+                    SET id_reserva = LAST_INSERT_ID();
                 ELSE
                     SET resultado = 'Reserva IDA-VUELTA no exitosa: No hay lugares disponibles.';
                 END IF;
