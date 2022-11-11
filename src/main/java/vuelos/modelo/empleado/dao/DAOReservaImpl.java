@@ -61,7 +61,7 @@ public class DAOReservaImpl implements DAOReserva {
 			result = cstmnt.getString(7);
 			id_reserva = cstmnt.getInt(8);
 			
-			logger.debug("Resultado: {}",result);
+			logger.debug("Resultado: {}", result);
 			
 			if (id_reserva == -1) {
 				throw new Exception(result);
@@ -287,6 +287,14 @@ public class DAOReservaImpl implements DAOReserva {
 				reserva.setVuelosClase(vuelos_clase);
 
 				logger.debug("Se recuperó la reserva: {}, {}", reserva.getNumero(), reserva.getEstado());
+
+				rs_reserva.close();
+				st_reserva.close();
+				rs_reserva_vuelos.close();
+				st_reserva_vuelos.close();
+
+			} else { // En caso de que no exista reserva con el codigo ingresado, se genera una excepción.
+				throw new Exception("No existe reserva con codigo " + codigoReserva);
 			}
 
 		} catch (SQLException ex){
